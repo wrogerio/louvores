@@ -10,9 +10,8 @@ $(function () {
       louvores.forEach(louvor => {
         let row = `
           <tr>
-            <td>${louvor.nome}</td>
+            <td>${louvor.nome} (<strong>${louvor.tom}</strong>)</td>
             <td>${louvor.cantor}</td>
-            <td width=80>${louvor.tom}</td>
             <td class="text-center"></td>
           </tr>
         `
