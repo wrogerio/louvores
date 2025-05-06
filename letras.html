@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="lib/font-awesome-pro-main/css/all.min.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <input type="text" id="id" />
+      <div class="row mb-2">
+        <div class="col">
+          <div class="d-flex justify-content-end align-items-center mb-2">
+            <a href="index.html" class="btn btn-sm btn-outline-primary" id="linkVoltar"> <i class="fa-solid fa-list-timeline me-2"></i>Louvores </a>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2 g-2">
+        <div class="col-12">
+          <span class="fw-bold fs-4" id="louvorNome">Nome</span>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col">
+          <table class="table table-bordered table-sm" id="tbLetrasLouvores">
+            <tbody id="tableDataBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="lib/font-awesome-pro-main/js/pro.min.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="./js/letras.js" type="module"></script>
+  </body>
+</html>

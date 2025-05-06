@@ -19,6 +19,10 @@ input[type="text"] {
   font-size: 1.15rem !important;
 }
 
+textarea {
+  font-size: 1.15rem !important;
+}
+
 input[type="number"] {
   font-size: 1.15rem !important;
 }

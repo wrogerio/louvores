@@ -1,0 +1,23 @@
+<div class="row mb-2 g-2">
+  <div class="col-12 col-md-6">
+    <label for="letra" class="form-label">Letra</label>
+    <textarea type="text" class="form-control form-control-sm" id="letra" rows="4"></textarea>
+  </div>
+  <div class="col-12">
+    <label for="notas" class="form-label">Notas</label>
+    <input type="text" class="form-control form-control-sm" id="notas" />
+  </div>
+  <div class="col-6">
+    <label for="notas" class="form-label">Ordem</label>
+    <input type="number" step="1" class="form-control form-control-sm" id="ordem" />
+  </div>
+  <div class="col-6">
+    <label for="is_intro" class="form-label">Introdução?</label>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="is_intro">
+      <label class="form-check-label" for="is_intro" id="labelIsIntro">
+        Não
+      </label>
+    </div>
+  </div>
+</div>

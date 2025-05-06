@@ -6,7 +6,7 @@ $(function () {
     louvores.forEach(louvor => {
       $('#tableDataBody').append(`
         <tr>
-          <td colspan="3">
+          <td>
             <div class="d-flex justify-content-between align-items-center">
               <a href="apresentacao.html?id=${louvor.id}" class="text-primary me-2">
                 ${louvor.nome}
@@ -21,6 +21,9 @@ $(function () {
               <section class='text-success fw-bold'>
                 <a href="editar.html?id=${louvor.id}" class="text-primary me-2">
                   <i class="fa-regular fa-money-check-pen"></i>
+                </a>
+                <a href="letras.html?id=${louvor.id}" class="text-primary me-2">
+                  <i class="fa-regular fa-line-height"></i>
                 </a>
                 <a href="remover.html?id=${louvor.id}" class="text-danger">
                   <i class="fa-solid fa-trash-xmark"></i>

@@ -56,6 +56,36 @@ export function getLouvorById(id) {
   });
 }
 
+export function getLetras(id) {
+  return new Promise((resolve, reject) => {
+    $.ajax({
+      url: `${url_root}${letras}?select=*`,
+      type: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': anon,
+        'Authorization': `Bearer ${anon}`,
+      },
+      success: function (data) {
+        const arrayLetras = data.map(letra => ({
+          id: letra.id,
+          letra: letra.letra,
+          louvor_id: letra.louvor_id,
+          is_intro: letra.is_intro,
+          notas: letra.notas,
+          ordem: letra.ordem,
+        }));
+        resolve(arrayLetras); // Retorna o array para quem chamou
+      },
+      error: function (xhr, status, error) {
+        console.error('Erro ao buscar as letras:', error);
+        reject(error); // Retorna o erro para quem chamou
+      }
+    });
+  });
+}
+
+
 export function editarLouvor(id, nome, cantor, inicio, tom, formula) {
   return new Promise((resolve, reject) => {
     $.ajax({
