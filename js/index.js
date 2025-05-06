@@ -5,11 +5,10 @@ const anon = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZ
 
 $(function () {
   $('#tableDataBody').empty();
-  $(window).on('load', function () {
-    getLouvores()
-      .then(louvores => {
-        louvores.forEach(louvor => {
-          let row = `
+  getLouvores()
+    .then(louvores => {
+      louvores.forEach(louvor => {
+        let row = `
           <tr>
             <td colspan="3">
               <div class="d-flex justify-content-between align-items-center">
@@ -38,13 +37,12 @@ $(function () {
             </td>
           </tr>
         `
-          $('#tableDataBody').append(row);
-        });
-      })
-      .catch(error => {
-        console.error('Erro ao carregar louvores:', error);
+        $('#tableDataBody').append(row);
       });
-  });
+    })
+    .catch(error => {
+      console.error('Erro ao carregar louvores:', error);
+    });
 });
 
 
