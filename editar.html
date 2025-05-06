@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="lib/font-awesome-pro-main/css/all.min.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row mb-2">
+        <div class="col">
+          <h2>Editar</h2>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col">
+          <div class="d-flex justify-content-end align-items-center mb-2">
+            <a href="index.html" class="btn btn-sm btn-outline-primary"> <i class="fa-solid fa-list-timeline me-2"></i>Louvores </a>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2 g-2">
+        <div class="col-12">
+          <label for="nome" class="form-label">Nome</label>
+          <input type="text" class="form-control form-control-sm" id="nome" />
+        </div>
+        <div class="col-12">
+          <label for="inicio" class="form-label">Início</label>
+          <input type="text" maxlength="100" class="form-control form-control-sm" id="inicio" />
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="cantor" class="form-label">Cantor</label>
+          <input type="text" class="form-control form-control-sm" id="cantor" />
+        </div>
+        <div class="col-12 col-md-3">
+          <label for="tom" class="form-label">Tom</label>
+          <input type="text" class="form-control form-control-sm" id="tom" />
+        </div>
+        <div class="col-12 col-md-3">
+          <label for="formula" class="form-label">Fórmula</label>
+          <input type="text" class="form-control form-control-sm" id="formula" />
+        </div>
+      </div>
+      <div class="row mb-2 g-2">
+        <div class="col-12">
+          <span class="btn btn-sm btn-outline-primary" id="salvar"> <i class="fa-solid fa-save me-2"></i>Salvar</span>
+          <a href="index.html" class="btn btn-sm btn-outline-success"> <i class="fa-solid fa-file-import me-2"></i>Voltar</a>
+        </div>
+      </div>
+    </div>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="lib/font-awesome-pro-main/js/pro.min.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="js/variaveis.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/editar.js"></script>
+  </body>
+</html>
