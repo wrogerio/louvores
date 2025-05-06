@@ -1,9 +1,11 @@
-function getUrlId() {
+import {url_root, louvores, letras, anon} from './variaveis.js';
+
+export function getUrlId() {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('id');
 }
 
-function getLouvores() {
+export function getLouvores() {
   return new Promise((resolve, reject) => {
     $.ajax({
       url: `${url_root}${louvores}?select=*`,
@@ -32,7 +34,7 @@ function getLouvores() {
   });
 }
 
-function getLouvorById(id) {
+export function getLouvorById(id) {
   return new Promise((resolve, reject) => {
     $.ajax({
       url: `${url_root}${louvores}?select=*`,
@@ -54,7 +56,7 @@ function getLouvorById(id) {
   });
 }
 
-function editarLouvor(id, nome, cantor, inicio, tom, formula) {
+export function editarLouvor(id, nome, cantor, inicio, tom, formula) {
   return new Promise((resolve, reject) => {
     $.ajax({
       url: `${url_root}${louvores}?id=eq.${id}`,
@@ -83,7 +85,7 @@ function editarLouvor(id, nome, cantor, inicio, tom, formula) {
   });
 }
 
-function removerLouvor(id) {
+export function removerLouvor(id) {
   return new Promise((resolve, reject) => {
     $.ajax({
       url: `${url_root}${louvores}?id=eq.${id}`,
@@ -104,7 +106,7 @@ function removerLouvor(id) {
   });
 }
 
-function adicionarLouvor(nome, cantor, inicio, tom, formula) {
+export function adicionarLouvor(nome, cantor, inicio, tom, formula) {
   return new Promise((resolve, reject) => {
     $.ajax({
       url: `${url_root}${louvores}`,

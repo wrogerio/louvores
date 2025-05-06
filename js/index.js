@@ -1,3 +1,5 @@
+import { getLouvores } from './functions.js';
+
 $(function () {
   $('#tableDataBody').empty();
   $(window).on('load', function () {

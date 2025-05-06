@@ -1,3 +1,5 @@
+import { getUrlId, getLouvorById, editarLouvor } from './functions.js';
+
 $(function () {
 
   $(window).on('load', function () {
