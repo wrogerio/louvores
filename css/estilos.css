@@ -1,3 +1,7 @@
+body {
+  padding-top: 10px !important;
+}
+
 .cursor {
   cursor: pointer;
 }
@@ -8,17 +12,17 @@ a {
 }
 
 #tbLouvores td {
-  font-size: 1.25rem !important;
+  font-size: 1.15rem !important;
 }
 
 input[type="text"] {
-  font-size: 1.2rem !important;
+  font-size: 1.15rem !important;
 }
 
 input[type="number"] {
-  font-size: 1.2rem !important;
+  font-size: 1.15rem !important;
 }
 
 input[type="date"] {
-  font-size: 1.2rem !important;
+  font-size: 1.15rem !important;
 }
