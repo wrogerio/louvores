@@ -10,9 +10,20 @@ $(function () {
       louvores.forEach(louvor => {
         let row = `
           <tr>
-            <td>${louvor.nome} (<strong>${louvor.tom}</strong>)</td>
+            <td>
+              <a href="apresentacao.html?id=${louvor.id}" class="text-primary me-2">
+                ${louvor.nome} (<strong>${louvor.tom}</strong>)
+              </a>
+            </td>
             <td>${louvor.cantor}</td>
-            <td class="text-center"></td>
+            <td class="text-center">
+              <a href="editar.html?id=${louvor.id}" class="text-primary me-2">
+                <i class="fa-regular fa-money-check-pen"></i>
+              </a>
+              <a href="remover.html?id=${louvor.id}" class="text-danger">
+                <i class="fa-solid fa-trash-xmark"></i>
+              </a>
+            </td>
           </tr>
         `
         $('#tableDataBody').append(row);
