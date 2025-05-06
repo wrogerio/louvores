@@ -68,7 +68,7 @@ function getLouvores() {
         resolve(arrayLouvores); // Retorna o array para quem chamou
       },
       error: function (xhr, status, error) {
-        console.error('Erro ao buscar os louvores:', error);
+        alert(error);
         reject(error); // Retorna o erro para quem chamou
       }
     });
