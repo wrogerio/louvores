@@ -41,10 +41,7 @@ $(function () {
   //       $('#tableDataBody').append(row);
   //     });
 })
-  .catch(error => {
-    console.error('Erro ao carregar louvores:', error);
-  });
-});
+  
 
 
 function getLouvores() {
