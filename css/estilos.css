@@ -10,3 +10,15 @@ a {
 #tbLouvores td {
   font-size: 1.25rem !important;
 }
+
+input[type="text"] {
+  font-size: 1.2rem !important;
+}
+
+input[type="number"] {
+  font-size: 1.2rem !important;
+}
+
+input[type="date"] {
+  font-size: 1.2rem !important;
+}
