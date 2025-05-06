@@ -58,8 +58,9 @@ export function getLouvorById(id) {
 
 export function getLetras(id) {
   return new Promise((resolve, reject) => {
+    
     $.ajax({
-      url: `${url_root}${letras}?select=*`,
+      url: `${url_root}${letras}?select=*, TbLouvores(nome, cantor)&order=ordem.asc&louvor_id=eq.${id}`,
       type: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -74,6 +75,8 @@ export function getLetras(id) {
           is_intro: letra.is_intro,
           notas: letra.notas,
           ordem: letra.ordem,
+          louvor: letra.TbLouvores.nome,
+          cantor: letra.TbLouvores.cantor,
         }));
         resolve(arrayLetras); // Retorna o array para quem chamou
       },

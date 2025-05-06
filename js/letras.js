@@ -17,11 +17,20 @@ $(function () {
   })
 
   getLetras(id).then(letras => {
+    console.log(letras[0])
+    $('#louvorNome').text(letras[0].louvor)
+    $('#louvorCantor').text(letras[0].cantor)
     letras.forEach(letra => {
+      let isIntro = letra.is_intro ? 'É introdução' : 'Estrofe'
       $('#tableDataBody').append(`
         <tr>
           <td>
-            <span>${letra.ordem}</span>
+            <div class="d-flex justify-content-between align-items-center text-center">
+              <span class='fw-bold'>${letra.ordem}</span>
+              <span class='fw-bold'>
+                ${isIntro}
+              </span>
+            </div>
             <div class="d-flex justify-content-center align-items-center text-center">
               <a href="editarletra.html?id=${letra.id}" class="text-primary me-2">
                 ${letra.letra}
